@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/query/query",
+    "pages/tels/tels"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#404040",
+    "navigationBarTitleText": "医药数据",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home_focus.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "icon/query.png",
+        "selectedIconPath": "icon/query_focus.png",
+        "pagePath": "pages/query/query",
+        "text": "查询"
+      },
+      {
+        "iconPath": "icon/tele.png",
+        "selectedIconPath": "icon/tele_focus.png",
+        "pagePath": "pages/tels/tels",
+        "text": "招商"
+      }
+    ]
+  }
+}

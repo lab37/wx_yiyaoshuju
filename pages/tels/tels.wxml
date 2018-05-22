@@ -1,0 +1,47 @@
+<!--pages/tels/tels.wxml-->
+<text>各地区招商信息</text>
+<view class='flex-row'>
+      <text class="flex-cell">招商品种</text>
+      <text class="flex-cell">招商地区</text>
+      <text class="flex-cell">目标医院</text>
+      <text class="flex-cell">联系人</text>
+      <text class="flex-cell">中标价格</text>
+      <text class="flex-cell">联系电话</text>
+      <text class="flex-cell">备注</text>
+</view>
+<view class='flex-row'>
+      <text class="flex-cell">注射用丹参（冻干)</text>
+      <text class="flex-cell">山东省</text>
+      <text class="flex-cell">*</text>
+      <text class="flex-cell">张经理</text>
+      <text class="flex-cell">20.64</text>
+      <text class="flex-cell">18678882569</text>
+      <text class="flex-cell">医保不受限</text>
+</view>
+<view class='flex-row'>
+      <text class="flex-cell">注射用红花黄色素</text>
+      <text class="flex-cell">泰安市</text>
+      <text class="flex-cell">泰安市</text>
+      <text class="flex-cell">张经理</text>
+      <text class="flex-cell">61.26</text>
+      <text class="flex-cell">13181806168</text>
+      <text class="flex-cell">医保不受限</text>
+</view>
+<view class='flex-row'>
+      <text class="flex-cell">注射用盐酸头孢替安</text>
+      <text class="flex-cell">泰安市</text>
+      <text class="flex-cell">泰安市</text>
+      <text class="flex-cell">张经理</text>
+      <text class="flex-cell">14-88</text>
+      <text class="flex-cell">13181806168</text>
+      <text class="flex-cell">医保不受限</text>
+</view>
+<view class='flex-row'>
+      <text class="flex-cell">依诺肝素钠注射液</text>
+      <text class="flex-cell">泰安市</text>
+      <text class="flex-cell">泰安市</text>
+      <text class="flex-cell">张经理</text>
+      <text class="flex-cell">48-98</text>
+      <text class="flex-cell">13181806168</text>
+      <text class="flex-cell">医保不受限</text>
+</view>

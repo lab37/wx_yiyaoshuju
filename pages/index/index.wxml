@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view>
+  <view class='p'>
+    <text>这是一个数据查询网站，方便在山东省从事医药营销行业的业务员查询相应的数据，内容不定期更新。 同行有什么建议或问题可以联系站长，大家共同进步（QQ：379718363留言即可，不定期查看），可承接数据处理工作。</text>
+  </view>
+  <view class="container" >
+    <swiper indicator-dots='ture' autoplay='true' interval='4000'>
+      <swiper-item>
+        <image src='https://www.yiyaoshuju.cn/img/danshen.jpg' />
+      </swiper-item>
+      <swiper-item>
+        <image src='https://www.yiyaoshuju.cn/img/letan.jpg' />
+      </swiper-item>
+      <swiper-item>
+        <image src='https://www.yiyaoshuju.cn/img/tian.jpg' />
+      </swiper-item>
+      <swiper-item>
+        <image src='https://www.yiyaoshuju.cn/img/yinuo.jpg' />
+      </swiper-item>
+   </swiper>
+  </view>
+</view>

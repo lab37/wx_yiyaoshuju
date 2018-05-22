@@ -1,0 +1,106 @@
+<!--pages/query/query.wxml-->
+<form bindsubmit="formSubmit" > 
+  <input type="text" class="input-text" name="yaopin_name" placeholder="请输入药品名称(可选)" />
+  <input type="text" class="input-text" name="shengchanqiye" placeholder="请输入生产企业(可选)" />
+  <radio-group name="neirong">
+    <label><radio value="zhongbiao" checked='true'/>省区中标目录</label>  
+    <label><radio value="jcbc"/>基层增补目录</label>
+    <label><radio value="yibao"/>医疗保险目录</label>
+  </radio-group>
+  <button formType="submit">查询</button>  
+  <button formType="reset">清空</button>
+</form>
+<text class="attention">注:查询医保目录无需输入生产企业</text>
+<view id='jieguo'>
+  <view class="panel" wx:if="{{Title=='zhongbiao'}}">
+    <view class='flex-row'>
+      <text class="flex-cell">通用名</text>
+      <text class="flex-cell">剂型</text>
+      <text class="flex-cell">规格</text>
+      <text class="flex-cell">商品名</text>
+      <text class="flex-cell">价格</text>
+      <text class="flex-cell">说明</text>
+      <text class="flex-cell">限价</text>
+      <text class="flex-cell">包装</text>
+      <text class="flex-cell">类型</text>
+      <text class="flex-cell">基药</text>
+      <text class="flex-cell">企业</text>
+      <text class="flex-cell">适用</text>
+    </view>
+    <view wx:for="{{Response}}">
+      <view class='flex-row'>
+        <text class="flex-cell flex-row">{{item.Tym}}</text>
+        <text class="flex-cell flex-row">{{item.Jx}}</text>
+        <text class="flex-cell flex-row">{{item.Gg}}</text>
+        <text class="flex-cell flex-row">{{item.Spm}}</text>
+        <text class="flex-cell flex-row">{{item.Jg}}</text>
+        <text class="flex-cell flex-row">{{item.Jgsm}}</text>
+        <text class="flex-cell flex-row">{{item.Lsxj}}</text>
+        <text class="flex-cell flex-row">{{item.Bz}}</text>
+        <text class="flex-cell flex-row">{{item.Cglx}}</text>
+        <text class="flex-cell flex-row">{{item.Sfjy}}</text>
+        <text class="flex-cell flex-row">{{item.Scqy}}</text>
+        <text class="flex-cell flex-row">{{item.Sy}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel" wx:if="{{Title=='jcbc'}}">
+    <view class='flex-row'>
+      <text class="flex-cell flex-row">通用名</text>
+      <text class="flex-cell flex-row">剂型</text>
+      <text class="flex-cell flex-row">规格</text>
+      <text class="flex-cell flex-row">包装</text>
+      <text class="flex-cell flex-row">包材</text>
+      <text class="flex-cell flex-row">厂家</text>
+      <text class="flex-cell flex-row">价格</text>
+      <text class="flex-cell flex-row">说明</text>
+      <text class="flex-cell flex-row">最低</text>
+      <text class="flex-cell flex-row">平均</text>
+      <text class="flex-cell flex-row">类型</text>
+      <text class="flex-cell flex-row">项目</text>
+    </view>
+    <view wx:for="{{Response}}">
+      <view class='flex-row'>
+        <text class="flex-cell flex-row">{{item.Tym}}</text>
+        <text class="flex-cell flex-row">{{item.Jx}}</text>
+        <text class="flex-cell flex-row">{{item.Gg}}</text>
+        <text class="flex-cell flex-row">{{item.Bz}}</text>
+        <text class="flex-cell flex-row">{{item.Bzcl}}</text>
+        <text class="flex-cell flex-row">{{item.Sccj}}</text>
+        <text class="flex-cell flex-row">{{item.Jg}}</text>
+        <text class="flex-cell flex-row">{{item.Jgsm}}</text>
+        <text class="flex-cell flex-row">{{item.Zdjyjg}}</text>
+        <text class="flex-cell flex-row">{{item.Pjjyjg}}</text>
+        <text class="flex-cell flex-row">{{item.Cglx}}</text>
+        <text class="flex-cell flex-row">{{item.Xmmc}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="panel" wx:if="{{Title=='yibao'}}">
+    <view class='flex-row'>
+      <text class="flex-cell flex-row">代码</text>
+      <text class="flex-cell flex-row">分类1</text>
+      <text class="flex-cell flex-row">分类3</text>
+      <text class="flex-cell flex-row">类型</text>
+      <text class="flex-cell flex-row">编号</text>
+      <text class="flex-cell flex-row">通用名</text>
+      <text class="flex-cell flex-row">剂型</text>
+      <text class="flex-cell flex-row">备注</text>
+    </view>
+    <view wx:for="{{Response}}">
+      <view class='flex-row'>
+        <text class="flex-cell flex-row">{{item.Fldm}}</text>
+        <text class="flex-cell flex-row">{{item.Fl1}}</text>
+        <text class="flex-cell flex-row">{{item.Fl3}}</text>
+        <text class="flex-cell flex-row">{{item.Yblx}}</text>
+        <text class="flex-cell flex-row">{{item.Bh}}</text>
+        <text class="flex-cell flex-row">{{item.Ypmc}}</text>
+        <text class="flex-cell flex-row">{{item.Jx}}</text>
+        <text class="flex-cell flex-row">{{item.Bz}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>
