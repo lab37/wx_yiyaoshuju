@@ -15,7 +15,7 @@ radio-group {
 }
 
 .attention {
-  font-size: 32rpx;
+  font-size: 24rpx;
 }
 .panel {
   background:#fff;

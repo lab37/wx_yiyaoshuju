@@ -19,7 +19,33 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    var context = wx.createContext();
 
+    context.setLineWidth(10);
+    context.setLineCap("round");
+    context.setLineJoin("round");
+    context.setStrokeStyle("#808080");
+    //context.setShadow(2,2,10,'#8F8F8F');
+  
+    context.moveTo(100, 20);
+    context.lineTo(31, 140);
+    context.lineTo(169, 140);
+    context.lineTo(100, 20);
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(100, 180);
+    context.lineTo(31, 60);
+    context.lineTo(169, 60);
+    context.lineTo(100, 180);
+    context.stroke();
+    
+
+
+    wx.drawCanvas({
+      canvasId: 1,
+      actions: context.getActions()
+    });
   },
 
   /**

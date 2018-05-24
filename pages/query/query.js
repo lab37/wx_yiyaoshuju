@@ -6,7 +6,7 @@ Page({
   },
 
   formSubmit: function (e) {
-    var that = this
+    var that = this;
     if(e.detail.value.yaopin_name==""&&e.detail.value.shengchanqiye==""){
       wx.showModal({
         title: '错误提示',

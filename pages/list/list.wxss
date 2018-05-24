@@ -1,0 +1,56 @@
+/* pages/list/list.wxss */
+
+.h1 {
+  font-size: 48rpx;
+}
+
+#beiwang {
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 32rpx;
+}
+
+.biaodan {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.attention {
+  font-size: 24rpx;
+}
+
+.panel {
+  background:#fff;
+}
+
+.panel text {
+  font-size: 24rpx;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #ddd;
+  margin-bottom: 8rpx;
+}
+
+.flex-row text {
+  font-size: 24rpx;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+
+input { 
+  margin-top: 16rpx;
+  background-color: #F5F5F5;
+  margin-bottom: 16rpx;
+  height: 64rpx;
+}
+
+#jieguo {
+  margin-top: 32rpx;
+}

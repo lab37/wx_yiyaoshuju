@@ -1,0 +1,69 @@
+<!--pages/list/list.wxml-->
+<view id='beiwang'>
+<text class='h1'>常用链接与备忘录</text>
+<view class='flex-row'>
+      <text class="flex-cell">瑞数流向查询：</text>
+      <text class="flex-cell">https://221.0.92.172:8443/bfs/LoginServlet/main</text>
+      <text class="flex-cell"></text>
+</view>
+
+<view class='flex-row'>
+      <text class="flex-cell">九洲通流向查询：</text>
+      <text class="flex-cell">http://60.208.78.46:888/</text>
+      <text class="flex-cell"></text>
+</view>
+
+<view class='flex-row'>
+      <text class="flex-cell">华润山东流向查询：</text>
+      <text class="flex-cell">http://58.56.94.148:8090/</text>
+      <text class="flex-cell"></text>
+</view>
+
+<view class='flex-row'>
+      <text class="flex-cell">国药控股流向查询：</text>
+      <text class="flex-cell">http://222.173.24.186:9090/</text>
+      <text class="flex-cell"></text>
+</view>
+</view>
+<view class="biaodan">
+<text class='h1'>品种地区负责人查询</text>
+  <form bindsubmit="formSubmit" > 
+    <input type="text" class="input-text" name="yaopin_name" placeholder="请输入药品名称(可选)" />
+    <input type="text" class="input-text" name="shengchanqiye" placeholder="请输入生产企业(可选)" />
+    <input type="text" class="input-text" name="dishi" placeholder="请输入地市(可选)" />
+    <button formType="submit">查询</button>  
+    <button formType="reset">清空</button>
+  </form>
+</view>
+<view class="attention">更多数据与内容请登陆：www.yiyaoshuju.cn</view>
+
+<view id='jieguo'>
+  <view class="panel">
+    <view class='flex-row' wx:if="{{Title==1}}">
+      <text class="flex-cell">通用名</text>
+      <text class="flex-cell">剂型</text>
+      <text class="flex-cell">规格</text>
+      <text class="flex-cell">企业</text>
+      <text class="flex-cell">地市</text>
+      <text class="flex-cell">医院</text>
+      <text class="flex-cell">负责人</text>
+      <text class="flex-cell">联系方式</text>
+      <text class="flex-cell">类型</text>
+      <text class="flex-cell">备注</text>
+    </view>
+    <view wx:for="{{Response}}">
+      <view class='flex-row'>
+        <text class="flex-cell flex-row">{{item.Tym}}</text>
+        <text class="flex-cell flex-row">{{item.Jx}}</text>
+        <text class="flex-cell flex-row">{{item.Gg}}</text>
+        <text class="flex-cell flex-row">{{item.Scqy}}</text>
+        <text class="flex-cell flex-row">{{item.Ds}}</text>
+        <text class="flex-cell flex-row">{{item.Yy}}</text>
+        <text class="flex-cell flex-row">{{item.Fzr}}</text>
+        <text class="flex-cell flex-row">{{item.Lxfs}}</text>
+        <text class="flex-cell flex-row">{{item.Rylx}}</text>
+        <text class="flex-cell flex-row">{{item.Bz}}</text>
+      </view>
+    </view>
+  </view>
+</view>

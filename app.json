@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/query/query",
-    "pages/tels/tels"
+    "pages/list/list"
   ],
   "window": {
     "navigationBarBackgroundColor": "#404040",
@@ -29,10 +29,10 @@
         "text": "查询"
       },
       {
-        "iconPath": "icon/tele.png",
-        "selectedIconPath": "icon/tele_focus.png",
-        "pagePath": "pages/tels/tels",
-        "text": "招商"
+        "iconPath": "icon/list.png",
+        "selectedIconPath": "icon/list_focus.png",
+        "pagePath": "pages/list/list",
+        "text": "清单"
       }
     ]
   }

@@ -10,7 +10,8 @@
   <button formType="submit">查询</button>  
   <button formType="reset">清空</button>
 </form>
-<text class="attention">注:查询医保目录无需输入生产企业</text>
+<view class="attention"><text>注:查询医保目录无需输入生产企业</text></view>
+<view class="attention"><text>更多数据与内容请登陆：www.yiyaoshuju.cn</text></view>
 <view id='jieguo'>
   <view class="panel" wx:if="{{Title=='zhongbiao'}}">
     <view class='flex-row'>
