@@ -1,0 +1,51 @@
+<!--pages/query/renli/renli.wxml-->
+<view class="biaodan">
+ <text class='h1'>厂家负责人查询:</text>
+  <form bindsubmit="formSubmit" > 
+    <input type="text" class="input-text" name="yaopin_name" placeholder="请输入药品名称(可选)" />
+    <input type="text" class="input-text" name="shengchanqiye" placeholder="请输入生产企业(可选)" />
+    <input type="text" class="input-text" name="dishi" placeholder="请输入地市(可选)" />
+    <input type="text" class="input-text" name="quxian" placeholder="请输入区县(可选)" />
+    <input type="text" class="input-text" name="yiyuan" placeholder="请输入医院(可选)" />
+    <radio-group name="neirong">
+      <label>
+        <radio value="rlzya" checked='true' />厂家负责人</label>
+      <label>
+        <radio value="rlzyb" />医院操作人</label>
+    </radio-group>
+    <button type="primary" formType="submit">查询</button>  
+    <button type="warn" formType="reset">清空</button>
+  </form>
+</view>
+<view class="attention">更多数据与内容请登陆：www.yiyaoshuju.cn</view>
+
+<view id='jieguo'>
+  <view class="panel">
+    <view class='flex-row' wx:if="{{Title==1}}">
+      <text class="flex-cell">通用名</text>
+      <text class="flex-cell">剂型</text>
+      <text class="flex-cell">规格</text>
+      <text class="flex-cell">企业</text>
+      <text class="flex-cell">地市</text>
+      <text class="flex-cell">医院</text>
+      <text class="flex-cell">负责人</text>
+      <text class="flex-cell">联系方式</text>
+      <text class="flex-cell">类型</text>
+      <text class="flex-cell">备注</text>
+    </view>
+    <view wx:for="{{Response}}">
+      <view class='flex-row'>
+        <text class="flex-cell flex-row">{{item.Tym}}</text>
+        <text class="flex-cell flex-row">{{item.Jx}}</text>
+        <text class="flex-cell flex-row">{{item.Gg}}</text>
+        <text class="flex-cell flex-row">{{item.Scqy}}</text>
+        <text class="flex-cell flex-row">{{item.Ds}}</text>
+        <text class="flex-cell flex-row">{{item.Yy}}</text>
+        <text class="flex-cell flex-row">{{item.Fzr}}</text>
+        <text class="flex-cell flex-row">{{item.Lxfs}}</text>
+        <text class="flex-cell flex-row">{{item.Rylx}}</text>
+        <text class="flex-cell flex-row">{{item.Bz}}</text>
+      </view>
+    </view>
+  </view>
+</view>  

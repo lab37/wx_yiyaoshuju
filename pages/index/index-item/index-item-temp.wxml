@@ -1,0 +1,7 @@
+<template name="indexItem">
+  <view class="index">
+      <image src="{{indexImg}}"></image>
+      <text>{{indexName}}</text>
+    </view>
+</template>
+

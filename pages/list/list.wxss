@@ -1,56 +1,64 @@
-/* pages/list/list.wxss */
-
 .h1 {
-  font-size: 48rpx;
-}
-
-#beiwang {
-  border-style: solid;
-  border-width: 1px;
+  text-align: center;
+  font-size: 17pt;
   margin-bottom: 32rpx;
-}
-
-.biaodan {
-  border-style: solid;
-  border-width: 1px;
-}
-
-.attention {
-  font-size: 24rpx;
-}
-
-.panel {
-  background:#fff;
-}
-
-.panel text {
-  font-size: 24rpx;
-  border-right: 1rpx solid #ddd;
-  border-bottom: 1rpx solid #ddd;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  background-color: #ddd;
-  margin-bottom: 8rpx;
-}
-
-.flex-row text {
-  font-size: 24rpx;
-  border-right: 1rpx solid #ddd;
-  border-bottom: 1rpx solid #ddd;
-}
-
-input { 
   margin-top: 16rpx;
-  background-color: #F5F5F5;
-  margin-bottom: 16rpx;
-  height: 64rpx;
-}
+  }
 
-#jieguo {
-  margin-top: 32rpx;
+.goods-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  flex-wrap:wrap;
+  box-sizing: content-box;
+  padding: 0rpx;
+}
+.list-group{
+  display: flex;
+  padding:5px 10px;
+}
+.img{
+   width:100%;
+}
+.list-left{
+  flex:0 0 100px;
+}
+.list-right{
+  flex:1;
+}
+.title{
+  font-size:16px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.desc{
+  font-size:14px;
+  color:#7a7a7a;
+  margin-top:5px;
+}
+.price-box{
+  margin-top:5px;
+}
+.price{
+  font-size:14px;
+  color:red;
+}
+.num{
+  font-size:14px;
+  float: right;
+}
+.illustrate{
+  font-size:14px;
+  margin-top:5px;
+  color:#7a7a7a;
+}
+.more{
+  float: right;
+  color:rgb(67,197,230);
+}
+.goods-box {
+ border-bottom: 1px solid #e0e0e0;
 }

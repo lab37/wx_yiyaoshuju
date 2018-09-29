@@ -1,0 +1,12 @@
+<view>
+  <view class="tt">
+    <text>请根据您的需求选择</text>
+  </view>
+  <block wx:for="{{menuKey}}" wx:for-item="item">
+    <view class="index" catchtap="toSpecies" data-menu-id="{{item.menuId}}">
+      <image src="{{item.menuImg}}"></image>
+      <text>{{item.menuName}}</text>
+    </view>
+  </block>
+  
+</view>

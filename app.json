@@ -1,13 +1,27 @@
 {
   "pages":[
+    "pages/start/start",
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/authorize/index",
+    "pages/index/detail/detail",
+    "pages/one/one",
+    "pages/index/eno2/eno2",
+    "pages/index/eno1/eno1",
+    "pages/index/no2/no2",
+    "pages/index/no1/no1",
+    "pages/my/index",
+    "pages/goods-details/index",
+    "pages/notice/show",
+    "pages/small-tools/small-tools",
     "pages/query/query",
+    "pages/query/zhongduan/zhongduan",
+    "pages/query/renli/renli",
+    "pages/query/qudao/qudao",
     "pages/list/list"
   ],
   "window": {
     "navigationBarBackgroundColor": "#404040",
-    "navigationBarTitleText": "医药数据",
+    "navigationBarTitleText": "药搜搜",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": false
   },
@@ -18,21 +32,27 @@
     "list": [
       {
         "iconPath": "icon/home.png",
-        "selectedIconPath": "icon/home_focus.png",
+        "selectedIconPath": "icon/home_tap.png",
         "pagePath": "pages/index/index",
         "text": "首页"
       },
       {
         "iconPath": "icon/query.png",
-        "selectedIconPath": "icon/query_focus.png",
+        "selectedIconPath": "icon/query_tap.png",
         "pagePath": "pages/query/query",
         "text": "查询"
       },
       {
         "iconPath": "icon/list.png",
-        "selectedIconPath": "icon/list_focus.png",
+        "selectedIconPath": "icon/list_tap.png",
         "pagePath": "pages/list/list",
-        "text": "清单"
+        "text": "资讯"
+      },
+      {
+        "iconPath": "icon/user.png",
+        "selectedIconPath": "icon/user_tap.png",
+        "pagePath": "pages/my/index",
+        "text": "我的"
       }
     ]
   }

@@ -1,0 +1,6 @@
+<template name="oneItem">
+  <view class="one">
+      <image src="{{oneImg}}"></image>
+      <text>{{oneName}}</text>
+    </view>
+</template>

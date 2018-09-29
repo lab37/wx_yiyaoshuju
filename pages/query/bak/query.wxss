@@ -1,0 +1,44 @@
+/* pages/query/query.wxss */
+input { 
+  margin-top: 16rpx;
+  background-color: #F5F5F5;
+  margin-bottom: 32rpx;
+  height: 96rpx;
+}
+
+radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+  font-size: 27rpx;
+}
+button {
+   margin-bottom: 16rpx;
+}
+
+.attention {
+  font-size: 24rpx;
+ 
+}
+.panel {
+  background:#fff;
+}
+
+.panel text {
+  font-size: 24rpx;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ddd;
+  margin-bottom: 8rpx;
+  align-content: center;
+}
+
+.guige {
+  max-width: 100rpx;
+  word-wrap: break-word;
+}

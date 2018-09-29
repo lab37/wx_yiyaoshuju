@@ -1,0 +1,44 @@
+<view class='container'>
+  <view class="title-container">
+    <text class="allName">{{allName}}</text>
+    <text class="imName">{{indexName}}  {{menuName}}</text>
+  </view>
+  <view class="content">
+    <text>{{allCon}}</text>
+
+    <view class="dashang" bindtap="daShang">赏</view>
+    <text class="dashang1yuan">打赏作者1元</text>
+    <view class="hr">
+    </view>
+    <view class="tt">
+      <text>【人工在线指导服务资费说明】</text>
+    </view>
+    <text decode="{{true}}">&emsp;&emsp;人工在线帮助需要添加客服人员微信或QQ联系我们，把问题发给我们，我们就具体的问题同你协商修理费用和维修方法，修理成功后诚信付款即可。</text>
+    <view class="hr">
+    </view>
+    <text> </text>
+    <swiper indicator-dots="true" autoplay="true" interval="5000">
+      <swiper-item>
+        <image src="https://www.yiyaoshuju.cn/wx/guanggao/guanggao1.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://www.yiyaoshuju.cn/wx/guanggao/guanggao2.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="https://www.yiyaoshuju.cn/wx/guanggao/guanggao3.jpg"></image>
+      </swiper-item>
+    </swiper>
+    <view class="hr"></view>
+
+    <view>
+      <text>是否需要人工帮助？ </text>
+      <button type="primary" bindtap="calling">点击这里联系修理小兵</button>
+    </view>
+    <text>服务时间：08:00-16:00</text>
+    <text>服务范围：山东省泰安市全市 </text>
+    <text>客服微信：18660303073 </text>
+    <text>客服电话：15853873773</text>
+    <text>泰安市泰山区微分电子产品销售中心</text>
+
+  </view>
+</view>

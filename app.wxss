@@ -1,15 +1,25 @@
-/**app.wxss**/
-page{
-  width: auto;
-  padding-left: 8rpx;
-  padding-right: 8rpx;
+text {
+  font-family:  MicroSoft Yahei;
 }
-.container {
+container {
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+  background-color: #b2b2b2;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.wxParse-img {
+  display: block !important;
 }

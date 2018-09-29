@@ -1,0 +1,11 @@
+<view>
+  <view class="tt">
+    <text>请根据您的需求选择</text>
+  </view>
+  <block wx:for="{{allKey}}" wx:for-item="item">
+    <view class="index" catchtap="toDetail" data-good-id="{{item.id}}">
+      <image src="{{item.pic}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+</view>

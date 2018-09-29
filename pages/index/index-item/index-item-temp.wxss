@@ -1,0 +1,16 @@
+
+.index {
+  float: left;
+  width:225rpx;height: 285rpx;
+  margin:12rpx;
+  text-align: center;
+}
+.index image {
+  width: 180rpx;height:180rpx;
+  border:5px solid #e64340;
+  border-radius: 20%;
+}
+.index text {
+  margin-top:35rpx;
+  font-size: 32rpx;
+}

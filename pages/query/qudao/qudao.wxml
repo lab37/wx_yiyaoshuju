@@ -1,0 +1,59 @@
+<!--pages/query/qudao/qudao.wxml-->
+<view class="ctn">
+
+<view class='h1'>商业信息可以登陆如下网站查询：</view>
+<view class='p'>天眼查网站：<text>www.tianyancha.com</text></view>
+<view class='p'>国家食品药品监督管理总局：<text>app1.sfda.gov.cn</text></view>
+
+<view class='h1'>商业流向信息查询：</view>
+<view class='p'>瑞康流向查询：<text>221.0.92.172:8443/bfs/LoginServlet/main</text></view>
+<view class='p'>九洲通流向查询：<text>60.208.78.46:888</text></view>
+<view class='p'>华润山东流向查询：<text>58.56.94.148:8090</text></view>
+<view class='p'>国药控股流向查询：<text>222.173.24.186:9090</text></view>
+<view class="biaodan">
+ <text class='h1'>商业地区业务员查询:</text>
+  <form bindsubmit="formSubmit" > 
+    <input type="text" class="input-text" name="yaopin_name" placeholder="请输入商业名称(可选,例如：瑞康)" />
+    <input type="text" class="input-text" name="dishi" placeholder="请输入地市(可选)" />
+    <input type="text" class="input-text" name="quxian" placeholder="请输入区县(可选)" />
+    <button type="primary" formType="submit">查询</button>  
+    <button type="warn" formType="reset">清空</button>
+  </form>
+</view>
+
+<view id='jieguo'>
+  <view class="panel">
+    <view class='flex-row' wx:if="{{Title==1}}">
+      <text class="flex-cell">通用名</text>
+      <text class="flex-cell">剂型</text>
+      <text class="flex-cell">规格</text>
+      <text class="flex-cell">企业</text>
+      <text class="flex-cell">地市</text>
+      <text class="flex-cell">医院</text>
+      <text class="flex-cell">负责人</text>
+      <text class="flex-cell">联系方式</text>
+      <text class="flex-cell">类型</text>
+      <text class="flex-cell">备注</text>
+    </view>
+    <view wx:for="{{Response}}">
+      <view class='flex-row'>
+        <text class="flex-cell flex-row">{{item.Tym}}</text>
+        <text class="flex-cell flex-row">{{item.Jx}}</text>
+        <text class="flex-cell flex-row">{{item.Gg}}</text>
+        <text class="flex-cell flex-row">{{item.Scqy}}</text>
+        <text class="flex-cell flex-row">{{item.Ds}}</text>
+        <text class="flex-cell flex-row">{{item.Yy}}</text>
+        <text class="flex-cell flex-row">{{item.Fzr}}</text>
+        <text class="flex-cell flex-row">{{item.Lxfs}}</text>
+        <text class="flex-cell flex-row">{{item.Rylx}}</text>
+        <text class="flex-cell flex-row">{{item.Bz}}</text>
+      </view>
+    </view>
+  </view>
+</view>  
+
+
+
+
+
+</view>

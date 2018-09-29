@@ -1,0 +1,3 @@
+/* pages/index/no2/no2.wxss */
+@import "../index.wxss";
+@import "../index-item/index-item-temp.wxss";

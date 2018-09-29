@@ -1,0 +1,19 @@
+<import src="one-item/one-item-temp.wxml"/>
+<view>
+  <swiper indicator-dots="true" autoplay="true" interval="5000">
+    <swiper-item><image src="/img/about/about1.jpg"></image></swiper-item>
+    <swiper-item><image src="/img/about/about2.jpg"></image></swiper-item>
+  </swiper> 
+  <view class="tt">
+   <text>24小时预约极速上门维修服务</text>        
+  </view>
+  <view>
+<image src="/img/about/jishuyuan1.jpg"></image>
+<image src="/img/about/jishuyuan2.jpg"></image>
+</view>
+  <block wx:for="{{oneKey}}" wx:for-item="item">
+    <view catchtap="ones" data-one-id="{{item.oneId}}">
+      <template is="oneItem" data="{{...item}}"></template>
+    </view>
+  </block>
+  </view> 

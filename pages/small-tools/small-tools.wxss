@@ -1,0 +1,50 @@
+page {
+  background-color: #eeeeee;
+}
+.c {
+  margin-bottom: 64rpx;
+  margin-top: 16rpx;
+  
+}
+.h {
+  text-align: center;
+  font-size: 16pt;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 10rpx;
+}
+.texts {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  width:280rpx;
+  word-break:break-all;
+  background-color: #ffffff;
+ 
+}
+.textn{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  width:280rpx;
+  word-break:break-all;
+  background-color:#eeeeee;
+}
+
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10rpx;
+  padding-left: 10rpx;
+}
+
+.button1 {
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+  font-size: 12pt;
+}

@@ -1,0 +1,16 @@
+
+.one {
+  float: left;
+  width:225rpx;height: 285rpx;
+  margin:12rpx;
+  text-align: center;
+}
+.one image {
+  width: 100%;height:200rpx;
+border:0px solid #D28EFF;
+  border-radius: 100%;
+}
+.one text {
+  margin-top:10rpx;
+  font-size: 35rpx;
+}
