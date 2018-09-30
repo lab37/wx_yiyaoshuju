@@ -14,9 +14,12 @@ Page({
         nameLike: that.data.searchInput
       },
       success: function (res) {
+        console.log(res);
         var goods = [];
         for (var i = 0; i < res.data.data.length; i++) {
+          if (res.data.data[i].categoryId == 22831) {
           goods.push(res.data.data[i]);
+          }
         }
         that.setData({
           goods: goods,

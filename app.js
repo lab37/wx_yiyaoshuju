@@ -121,7 +121,7 @@ App({
     mallName: "药搜搜", //店铺名称
     alipayName: "15853873773", //店主收款支付宝帐号
     startWelcome: "welcome to here", //start页欢迎语
-    shareProfile: '我是勤劳的螺丝钉，修起东西来我最用心',  // 首页转发的时候话术
+    shareProfile: '我是周京成，方便业务开展做了个小工具，有意见随时给我说',  // 首页转发的时候话术
     about: "18660303073，微信同号，祝大家使用愉快！"  //关于我们的提示语
   }
   /*

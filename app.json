@@ -17,6 +17,8 @@
     "pages/query/zhongduan/zhongduan",
     "pages/query/renli/renli",
     "pages/query/qudao/qudao",
+    "pages/select-address/index",
+    "pages/address-add/index",
     "pages/list/list"
   ],
   "window": {

@@ -8,6 +8,11 @@
   <view wx:if="{{!userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
     <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号码</button>
   </view>
+  
+  <view class="my-item" style="border:none;padding-right:150rpx;width:auto;">
+    <navigator url="/pages/select-address/index" hover-class="navigator-hover">我的收货地址</navigator>
+  </view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
   <view wx:if="{{userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
     {{userMobile}}
   </view>
@@ -17,7 +22,7 @@
   <view style="height:20rpx;background: #eee;width:100%;"></view>
   
   <view class="dashang" bindtap="daShang">赏</view>
-  <text class="dashang1yuan">打赏1元</text>
+  <text class="dashang1yuan">支持软件1元</text>
   <view style="height:20rpx;background: #eee;width:100%;"></view>
   <view class="my-item" style="border:none;padding:0rpx;margin:0rpx;background:none;border:none;height:auto;line-height:auto;">
     <button type="warn" bindtap="relogin">重新授权登录</button>

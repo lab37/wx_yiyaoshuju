@@ -22,7 +22,7 @@
     </view>
   </view>
   <view class="dashang" bindtap="daShang">赏</view>
-  <text class="dashang1yuan">打赏作者1元</text>
+  <text class="dashang1yuan">打赏编缉1元</text>
   <view class="hr">
   </view>
 

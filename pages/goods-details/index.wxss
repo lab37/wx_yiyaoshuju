@@ -357,8 +357,10 @@
 }
 
 .hr {
-  width:90vw;
+  width:93vw;
   height:1px;
-  margin:0 auto;margin-top:30rpx;        margin-bottom: 10rpx;
+  margin:0 auto;
+  margin-top:30rpx;
+  margin-bottom: 10rpx;
   background-color: #EE0000;
 }

@@ -10,7 +10,7 @@ var data={
     allGoodsPrice: 1,
     yunPrice: 0,
     allGoodsAndYunPrice: 1,
-    goodsJsonStr: '[{"goodsId":85591,"number":1,"propertyChildIds":"","logisticsType":0, "inviter_id":0}]',
+    goodsJsonStr: '[{"goodsId":92337,"number":1,"propertyChildIds":"","logisticsType":0, "inviter_id":0}]',
     orderType: ""
   };
 function dashang(e) {

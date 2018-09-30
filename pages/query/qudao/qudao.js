@@ -10,17 +10,16 @@ Page({
 
   formSubmit: function (e) {
     var that = this;
-    if (e.detail.value.yaopin_name == "" && e.detail.value.shengchanqiye == "" && e.detail.value.dishi == '') {
+    if (e.detail.value.yaopin_name == "" && e.detail.value.region == "") {
       wx.showModal({
         title: '错误提示',
         content: '你未输入任何内容',
       })
     } else {
       wx.request({
-        url: 'https://www.yiyaoshuju.cn/chaxun?neirong=' + e.detail.value.neirong + '&yaopinname=' + e.detail.value.yaopin_name + '&shengchanqiye=' + e.detail.value.shengchanqiye + '&dishi=' + e.detail.value.dishi + '&quxian=' + e.detail.value.quxian + '&yiyuan=' + e.detail.value.yiyuan,
+        url: 'https://www.yiyaoshuju.cn/chaxun?neirong=channelh' + '&yaopinname=xx' + '&channel=' + e.detail.value.channel + '&region=' + e.detail.value.region,
         method: 'GET',
         success: function (res) {
-          console.log(res.data)
           that.setData({
             Title: 1,
             Response: res.data
