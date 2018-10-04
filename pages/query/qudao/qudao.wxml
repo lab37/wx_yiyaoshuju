@@ -1,56 +1,58 @@
 <!--pages/query/qudao/qudao.wxml-->
 <view class="ctn">
 
-<view class='h1'>商业信息可以登陆如下网站查询：</view>
-<view class='p'>天眼查网站：<text>www.tianyancha.com</text></view>
-<view class='p'>国家食品药品监督管理总局：<text>app1.sfda.gov.cn</text></view>
-
-<view class='h1'>商业流向信息查询：</view>
-<view class='p'>瑞康流向查询：<text>221.0.92.172:8443/bfs/LoginServlet/main</text></view>
-<view class='p'>九洲通流向查询：<text>60.208.78.46:888</text></view>
-<view class='p'>华润山东流向查询：<text>58.56.94.148:8090</text></view>
-<view class='p'>国药控股流向查询：<text>222.173.24.186:9090</text></view>
-<view class="biaodan">
- <text class='h1'>商业地区业务员查询:</text>
-  <form bindsubmit="formSubmit" > 
-    <input type="text" class="input-text" name="channel" placeholder="请输入商业名称(可选,例如：瑞康)" />
-    <input type="text" class="input-text" name="region" placeholder="请输入区域(可选)" />
-    <button type="primary" formType="submit">查询</button>  
-    <button type="warn" formType="reset">清空</button>
-  </form>
-</view>
-
-<view id='jieguo'>
-  <view class="panel">
-    <view class='flex-row' wx:if="{{Title==1}}">
-      <text class="flex-cell">商业名称</text>
-      <text class="flex-cell">类型</text>
-      <text class="flex-cell">区域</text>
-      <text class="flex-cell">医院</text>
-      <text class="flex-cell">部门</text>
-      <text class="flex-cell">职务</text>
-      <text class="flex-cell">姓名</text>
-      <text class="flex-cell">联系方式</text>
-      <text class="flex-cell">备注</text>
+  <view class='h1'>商业信息可以登陆如下网站查询：</view>
+  <view class='p'>天眼查网站：
+    <text>www.tianyancha.com</text>
+  </view>
+  <view class='p'>国家食品药品监督管理总局：
+    <text>app1.sfda.gov.cn</text>
+  </view>
+  <view class='h1'>商业流向信息查询：</view>
+  <block wx:for="{{flows}}">
+    <view class='p'>{{item.name}}
+      <text>{{item.url}}</text>
     </view>
-    <view wx:for="{{Response}}">
-      <view class='flex-row'>
-        <text class="flex-cell flex-row">{{item.Channel}}</text>
-        <text class="flex-cell flex-row">{{item.Type}}</text>
-        <text class="flex-cell flex-row">{{item.Region}}</text>
-        <text class="flex-cell flex-row">{{item.Hospital}}</text>
-        <text class="flex-cell flex-row">{{item.Department}}</text>
-        <text class="flex-cell flex-row">{{item.Post}}</text>
-        <text class="flex-cell flex-row">{{item.Name}}</text>
-        <text class="flex-cell flex-row">{{item.Tel}}</text>
-        <text class="flex-cell flex-row">{{item.Remark}}</text>
+  </block>
+  <view class="biaodan">
+    <text class='h1'>商业地区业务员查询:</text>
+    <form bindsubmit="formSubmit">
+      <input type="text" class="input-text" name="channel" placeholder="请输入商业名称(可选,例如：瑞康)" />
+      <input type="text" class="input-text" name="region" placeholder="请输入区域(可选)" />
+      <button type="primary" formType="submit">查询</button>
+      <button type="warn" formType="reset">清空</button>
+    </form>
+    <view class="attention">
+      <text>更多数据与内容请登陆：www.yiyaoshuju.cn</text>
+    </view>
+  </view>
+
+  <view id='jieguo'>
+    <view class="panel">
+      <view class='flex-row' wx:if="{{Title==1}}">
+        <text class="flex-cell">商业名称</text>
+        <text class="flex-cell">类型</text>
+        <text class="flex-cell">区域</text>
+        <text class="flex-cell">医院</text>
+        <text class="flex-cell">部门</text>
+        <text class="flex-cell">职务</text>
+        <text class="flex-cell">姓名</text>
+        <text class="flex-cell">联系方式</text>
+        <text class="flex-cell">备注</text>
+      </view>
+      <view wx:for="{{Response}}">
+        <view class='flex-row'>
+          <text class="flex-cell flex-row">{{item.Channel}}</text>
+          <text class="flex-cell flex-row">{{item.Type}}</text>
+          <text class="flex-cell flex-row">{{item.Region}}</text>
+          <text class="flex-cell flex-row">{{item.Hospital}}</text>
+          <text class="flex-cell flex-row">{{item.Department}}</text>
+          <text class="flex-cell flex-row">{{item.Post}}</text>
+          <text class="flex-cell flex-row">{{item.Name}}</text>
+          <text class="flex-cell flex-row">{{item.Tel}}</text>
+          <text class="flex-cell flex-row">{{item.Remark}}</text>
+        </view>
       </view>
     </view>
   </view>
-</view>  
-
-
-
-
-
 </view>

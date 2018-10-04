@@ -25,10 +25,7 @@
   <text class="dashang1yuan">打赏编缉1元</text>
   <view class="hr">
   </view>
-
-
   <view class="swiper_box" bindchange="swiperchange">
-
     <image src="{{goodsDetail.pics[0].pic}}_m" class="slide-image" />
   </view>
 

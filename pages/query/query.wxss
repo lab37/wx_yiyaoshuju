@@ -25,7 +25,8 @@ button {
 }
 .index text {
   margin-top:35rpx;
-  font-size: 32rpx;
+  font-size: 13pt;
+  color: #576B95;
 }
 
 input { 
@@ -44,7 +45,7 @@ radio-group {
 }
 
 .attention {
-  font-size: 24rpx;
+  font-size: 11pt;
 }
 .panel {
   background:#fff;

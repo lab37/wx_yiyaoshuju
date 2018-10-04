@@ -1,6 +1,6 @@
 <!--pages/query/renli/renli.wxml-->
 <view class="biaodan">
- <text class='h1'>厂家负责人查询:</text>
+ <text class='h1'>地区人力资源查询:</text>
   <form bindsubmit="formSubmit" > 
     <input type="text" class="input-text" name="yaopin_name" placeholder="请输入药品名称(可选)" />
     <input type="text" class="input-text" name="factory" placeholder="请输入生产企业(可选)" />

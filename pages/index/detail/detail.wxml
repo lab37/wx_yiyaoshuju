@@ -5,40 +5,35 @@
   </view>
   <view class="content">
     <text>{{allCon}}</text>
-
-    <view class="dashang" bindtap="daShang">赏</view>
-    <text class="dashang1yuan">打赏作者1元</text>
-    <view class="hr">
-    </view>
-    <view class="tt">
-      <text>关于本程序的说明</text>
-    </view>
-    <text decode="{{true}}">&emsp;&emsp;本程序是我业余时间开发的用于自己业务相关的一些数据汇总和查询工具，大家有什么建议可以和我说，其中信息有什么不对的欢迎大家联系我更正。</text>
-    <view class="hr">
-    </view>
-    <text> </text>
+    <view class="hr"></view>
     <swiper indicator-dots="true" autoplay="true" interval="5000">
       <swiper-item>
-        <image src="https://www.yiyaoshuju.cn/wx/guanggao/guanggao1.jpg"></image>
+        <image src="https://www.yiyaoshuju.cn/wx/yaosousou/img/advert/1.jpg"></image>
       </swiper-item>
       <swiper-item>
-        <image src="https://www.yiyaoshuju.cn/wx/guanggao/guanggao2.jpg"></image>
+        <image src="https://www.yiyaoshuju.cn/wx/yaosousou/img/advert/2.jpg"></image>
       </swiper-item>
       <swiper-item>
-        <image src="https://www.yiyaoshuju.cn/wx/guanggao/guanggao3.jpg"></image>
+        <image src="https://www.yiyaoshuju.cn/wx/yaosousou/img/advert/3.jpg"></image>
       </swiper-item>
     </swiper>
     <view class="hr"></view>
-
+    <view class="tt">
+      <text>关于本程序的说明</text>
+    </view>
+    <text decode="{{true}}">&emsp;&emsp;本程序是我业余时间开发的用于自己业务相关的一个查询工具，大家有什么建议可以和我说，其中信息有什么错误之处欢迎大家联系我更正，不胜感激。</text>
+    <view class="dashang" bindtap="daShang">赏</view>
+    <text class="dashang1yuan">支持软件1元</text>
+    <view class="hr"></view>
     <view>
       <text>是否需要人工帮助？ </text>
       <button type="primary" bindtap="calling">点击这里联系周京成</button>
     </view>
     <text>服务时间：08:00-16:00</text>
-    <text>服务范围：山东省泰安市全市 </text>
+    <text>服务范围：山东省各地市 </text>
     <text>作者微信：18660303073 </text>
     <text>作者电话：15853873773</text>
-    <text>哈药集团中药二厂周京成</text>
-
+    <text>药搜搜：周京成</text>
   </view>
+
 </view>

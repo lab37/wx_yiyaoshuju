@@ -6,7 +6,7 @@
 <view class='p'>国家食品药品监督管理总局：<text>app1.sfda.gov.cn</text></view>
 
 <view class="biaodan">
- <text class='h1'>地区医院查询:</text>
+ <text class='h1'>地区医疗终端查询:</text>
   <form bindsubmit="formSubmit" > 
     <input type="text" class="input-text" name="hospital" placeholder="请输入医院名称(可选,例如：北集坡)" />
     <input type="text" class="input-text" name="city" placeholder="请输入地市(可选)" />
@@ -14,6 +14,12 @@
     <button type="primary" formType="submit">查询</button>  
     <button type="warn" formType="reset">清空</button>
   </form>
+  <view class="attention">
+    <text>注:查询医保目录无需输入生产企业</text>
+  </view>
+  <view class="attention">
+    <text>更多数据与内容请登陆：www.yiyaoshuju.cn</text>
+  </view>
 </view>
 
 <view id='jieguo'>

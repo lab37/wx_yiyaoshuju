@@ -1,7 +1,7 @@
 <view class="ctn">
 <view>
   <view class="tt">
-    <text>查询内容</text>
+    <text>查询内容:</text>
   </view>
   <view class="index" catchtap="toSpecies" data-menu-id="renli">
     <image src="../../img/icon/renli.jpg"></image>
@@ -37,9 +37,6 @@
     <button type="primary" formType="submit">查询</button>
     <button type="warn" formType="reset">清空</button>
   </form>
-  <view class="attention">
-    <text>注:查询医保目录无需输入生产企业</text>
-  </view>
   <view class="attention">
     <text>更多数据与内容请登陆：www.yiyaoshuju.cn</text>
   </view>

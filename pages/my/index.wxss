@@ -56,7 +56,7 @@
 }
 
 .dashang {
-  font-size: 40pt;
+  font-size: 41pt;
   text-align: center;
 	margin-top: 30rpx;
   margin-bottom: 20rpx;

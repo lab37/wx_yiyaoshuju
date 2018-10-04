@@ -20,6 +20,7 @@ button {
   margin-top: 32rpx;
   border-width: 1px;
   border-style: solid;
+  border-color:#e64340;
 }
 
 .panel {
@@ -48,4 +49,7 @@ button {
 }
 #jieguo {
   margin-top: 32rpx;
+}
+.attention {
+  font-size: 11pt;
 }

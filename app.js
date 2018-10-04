@@ -1,48 +1,17 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     var that = this;
     //  获取商城名称
+    that.getSvcData();
     wx.request({
       url: 'https://api.it120.cc/' + that.globalData.subDomain + '/config/get-value',
       data: {
         key: 'mallName'
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data.code == 0) {
           wx.setStorageSync('mallName', res.data.data.value);
-        }
-      }
-    })
-    wx.request({
-      url: 'https://api.it120.cc/' + that.globalData.subDomain + '/score/send/rule',
-      data: {
-        code: 'goodReputation'
-      },
-      success: function (res) {
-        if (res.data.code == 0) {
-          that.globalData.order_reputation_score = res.data.data[0].score;
-        }
-      }
-    })
-    wx.request({
-      url: 'https://api.it120.cc/' + that.globalData.subDomain + '/config/get-value',
-      data: {
-        key: 'recharge_amount_min'
-      },
-      success: function (res) {
-        if (res.data.code == 0) {
-          that.globalData.recharge_amount_min = res.data.data.value;
-        }
-      }
-    })
-    // 获取砍价设置
-    wx.request({
-      url: 'https://api.it120.cc/' + that.globalData.subDomain + '/shop/goods/kanjia/list',
-      data: {},
-      success: function (res) {
-        if (res.data.code == 0) {
-          that.globalData.kanjiaList = res.data.data.result;
         }
       }
     })
@@ -57,7 +26,7 @@ App({
       data: {
         token: token
       },
-      success: function (res) {
+      success: function(res) {
         if (res.data.code != 0) {
           wx.removeStorageSync('token')
           that.goLoginPageTimeOut()
@@ -65,7 +34,50 @@ App({
       }
     })
   },
-  sendTempleMsg: function (orderId, trigger, template_id, form_id, page, postJsonString) {
+  getSvcData: function() {
+    wx.request({
+        url: 'https://www.yiyaoshuju.cn/wx/yaosousou/menu.json',
+
+        success: function(res) {
+          wx.setStorage({
+            key: "menuJson",
+            data: res.data
+          })
+        }
+
+      }),
+      wx.request({
+        url: 'https://www.yiyaoshuju.cn/wx/yaosousou/index.json',
+        success: function(res) {
+          wx.setStorage({
+            key: "indexJson",
+            data: res.data
+          })
+        }
+      }),
+      wx.request({
+        url: 'https://www.yiyaoshuju.cn/wx/yaosousou/all.json',
+        success: function(res) {
+
+          wx.setStorage({
+            key: "allJson",
+            data: res.data
+          })
+        }
+      }),
+      wx.request({
+        url: 'https://www.yiyaoshuju.cn/wx/yaosousou/flow.json',
+        success: function (res) {
+
+          wx.setStorage({
+            key: "flowJson",
+            data: res.data
+          })
+        }
+      })
+
+  },
+  sendTempleMsg: function(orderId, trigger, template_id, form_id, page, postJsonString) {
     var that = this;
     wx.request({
       url: 'https://api.it120.cc/' + that.globalData.subDomain + '/template-msg/put',
@@ -91,7 +103,7 @@ App({
       }
     })
   },
-  sendTempleMsgImmediately: function (template_id, form_id, page, postJsonString) {
+  sendTempleMsgImmediately: function(template_id, form_id, page, postJsonString) {
     var that = this;
     wx.request({
       url: 'https://api.it120.cc/' + that.globalData.subDomain + '/template-msg/put',
@@ -108,21 +120,19 @@ App({
         url: page,
         postJsonString: postJsonString
       },
-      success: (res) => {
-      }
+      success: (res) => {}
     })
   },
-  goLoginPageTimeOut: function () {
-  },
+  goLoginPageTimeOut: function() {},
   globalData: {
     userInfo: null,
     subDomain: "8471766f6000e200097fcc10e04159fc", // 如果你的域名是： https://api.it120.cc/abcd 那么这里只要填写 abcd
-    version: "1.0.0",  //my页面的版本号
+    version: "1.0.0", //my页面的版本号
     mallName: "药搜搜", //店铺名称
     alipayName: "15853873773", //店主收款支付宝帐号
     startWelcome: "welcome to here", //start页欢迎语
-    shareProfile: '我是周京成，方便业务开展做了个小工具，有意见随时给我说',  // 首页转发的时候话术
-    about: "18660303073，微信同号，祝大家使用愉快！"  //关于我们的提示语
+    shareProfile: '药搜搜，药品销售小工具', // 首页转发的时候话术
+    about: "18660303073，微信同号，祝大家使用愉快！" //关于我们的提示语
   }
   /*
   根据自己需要修改下单时候的模板消息内容设置，可增加关闭订单、收货时候模板消息提醒；

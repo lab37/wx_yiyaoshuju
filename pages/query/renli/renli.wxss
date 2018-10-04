@@ -29,13 +29,6 @@
   border-bottom: 1rpx solid #ddd;
 }
 
-input { 
-  margin-top: 16rpx;
-  background-color: #F5F5F5;
-  margin-bottom: 16rpx;
-  height: 64rpx;
-}
-
 #jieguo {
   margin-top: 32rpx;
 }
@@ -50,4 +43,11 @@ radio-group {
   justify-content: space-around;
   margin-bottom: 16rpx;
   font-size: 32rpx;
+}
+
+input { 
+  margin-top: 16rpx;
+  background-color: #F5F5F5;
+  margin-bottom: 16rpx;
+  height: 64rpx;
 }

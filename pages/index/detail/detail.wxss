@@ -39,7 +39,9 @@ swiper image {
 .hr {
   width:90vw;
   height:1px;
-  margin:0 auto;margin-top:30rpx;        margin-bottom: 10rpx;
+  margin:0 auto;
+  margin-top:16rpx;
+  margin-bottom: 16rpx;
   background-color: #EE0000;
 }
 .tt {
@@ -52,7 +54,7 @@ swiper image {
 .dashang {
   margin-right: auto;
   margin-left: auto;
-  font-size: 40pt;
+  font-size: 41pt;
   text-align: center;
 	margin-top: 30rpx;
   margin-bottom: 20rpx;

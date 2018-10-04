@@ -5,7 +5,8 @@ Page({
    */
   data: {
     Title: 0,
-    Response: {}
+    Response: {},
+    flows:[]
   },
 
   formSubmit: function (e) {
@@ -41,6 +42,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+        flows: wx.getStorageSync('flowJson')
+    });
+
 
   },
 
