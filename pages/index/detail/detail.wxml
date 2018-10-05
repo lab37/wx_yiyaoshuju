@@ -1,10 +1,18 @@
 <view class='container'>
   <view class="title-container">
-    <text class="allName">{{allName}}</text>
+  <text class="allName">{{allName}}</text>
     <text class="imName">{{indexName}}  {{menuName}}</text>
   </view>
   <view class="content">
-    <text>{{allCon}}</text>
+    <block wx:for="{{allCon}}" wx:for-item="Htem">
+    <view class="flex-row" >
+      <block wx:for="{{Htem}}">
+         <view class="flex-cell">
+            <text>{{item}}</text>
+          </view>
+      </block>
+    </view>
+  </block>
     <view class="hr"></view>
     <swiper indicator-dots="true" autoplay="true" interval="5000">
       <swiper-item>
@@ -27,13 +35,13 @@
     <view class="hr"></view>
     <view>
       <text>是否需要人工帮助？ </text>
-      <button type="primary" bindtap="calling">点击这里联系周京成</button>
+      <button type="primary" bindtap="calling">点击这里联系作者</button>
     </view>
     <text>服务时间：08:00-16:00</text>
     <text>服务范围：山东省各地市 </text>
     <text>作者微信：18660303073 </text>
     <text>作者电话：15853873773</text>
-    <text>药搜搜：周京成</text>
+    <text>药搜搜@zhoujingcheng</text>
   </view>
 
 </view>

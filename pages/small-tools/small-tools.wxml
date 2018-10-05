@@ -1,33 +1,8 @@
-<view class='c'>
-<view class="h">Base64编解码</view>
-  <form bindsubmit="Base64">
-
-    <view class="container">
-      <textarea class="texts" maxlength="-1" placeholder="把要加密或解密的文本复制到这" name="base64text" />
-      <view class="button">
-        <button form-type="submit" type="warn"  class="button1" id="1">编码</button>
-        <button form-type="submit" type ="primary" class="button1" id="2">解码</button>
-      </view>
-      <view class="textn">
-        <text selectable="true" >{{base64result}}</text>
-      </view>
-    </view>
-  </form>
+<view class="index" catchtap="smallTools" data-index-id="encoders">
+      <image src="../../img/icon/small-tools.jpg"></image>
+      <text>编码工具</text>
 </view>
-
-<view class="c">
-<view class="h">莫尔斯编解码</view>
-  <form bindsubmit="Mors">
-
-    <view class="container">
-      <textarea class="texts" maxlength="-1" placeholder="把要加密或解密的文本复制到这" name="morsstr" />
-      <view class="button">
-        <button form-type="submit" type="warn" class="button1" id="1">编码</button>
-        <button form-type="submit" type="primary" class="button1" id="2">解码</button>
-      </view>
-      <view class="textn">
-        <text selectable="true">{{morsResult}}</text>
-      </view>
-    </view>
-  </form>
+<view class="index" catchtap="smallTools" data-index-id="discount">
+      <image src="../../img/icon/small-tools.jpg"></image>
+      <text>税费计算器</text>
 </view>

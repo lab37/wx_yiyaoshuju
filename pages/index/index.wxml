@@ -42,4 +42,9 @@
     </view>
   </block>
 
+<view class="index" catchtap="smallTools">
+      <image src="../../img/icon/small-tools.jpg"></image>
+      <text>常用小工具</text>
+</view>
+
 </view>

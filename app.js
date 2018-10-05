@@ -130,8 +130,8 @@ App({
     version: "1.0.0", //my页面的版本号
     mallName: "药搜搜", //店铺名称
     alipayName: "15853873773", //店主收款支付宝帐号
-    startWelcome: "welcome to here", //start页欢迎语
-    shareProfile: '药搜搜，药品销售小工具', // 首页转发的时候话术
+    startWelcome: "Copy Right@zhoujingcheng", //start页欢迎语
+    shareProfile: '山东药品销售小工具', // 首页转发的时候话术
     about: "18660303073，微信同号，祝大家使用愉快！" //关于我们的提示语
   }
   /*

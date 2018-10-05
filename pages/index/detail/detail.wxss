@@ -15,6 +15,7 @@ swiper image {
   flex-direction: column;
   align-items: center;
   margin-bottom: 0rpx;
+  color: #e85654;
 }
 .allName {
   margin-top: 30rpx;
@@ -54,7 +55,7 @@ swiper image {
 .dashang {
   margin-right: auto;
   margin-left: auto;
-  font-size: 41pt;
+  font-size: 43pt;
   text-align: center;
 	margin-top: 30rpx;
   margin-bottom: 20rpx;
@@ -72,4 +73,12 @@ swiper image {
   margin:auto;
   color:#CD0000;
   font-size:12pt;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #ddd;
+  margin-bottom: 8rpx;
 }

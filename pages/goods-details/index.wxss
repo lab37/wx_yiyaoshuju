@@ -336,7 +336,7 @@
 .dashang {
   margin-right: auto;
   margin-left: auto;
-  font-size: 41pt;
+  font-size: 43pt;
   text-align: center;
 	margin-top: 30rpx;
   margin-bottom: 20rpx;

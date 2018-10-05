@@ -29,6 +29,13 @@ Page({
       url: urlto
     })
   },
+
+  smallTools: function (e) {
+    var urlto = "../small-tools/small-tools";
+    wx.navigateTo({
+      url: urlto
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -70,7 +77,7 @@ Page({
 
   onShareAppMessage: function() {
     return {
-      title: wx.getStorageSync('mallName') + '——' + app.globalData.shareProfile,
+      title: wx.getStorageSync('mallName') + '—' + app.globalData.shareProfile,
       path: '/pages/index/index',
       success: function(res) {
         // 转发成功

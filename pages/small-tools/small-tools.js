@@ -13,7 +13,13 @@ Page({
       base64result: result
     })
   },
-
+  smallTools: function (e) {
+    var id = e.currentTarget.dataset.indexId;
+    var urlto = id + '/' + id;
+    wx.navigateTo({
+      url: urlto
+    })
+  },
   Mors: function (e) {
     var result = '';
     if (e.detail.target.id == "1") {

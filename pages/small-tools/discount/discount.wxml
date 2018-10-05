@@ -1,0 +1,12 @@
+<view class="h1">高开票费用计算：</view>
+<form bindsubmit="formSubmit">
+    <input type="digit" name="lowPrice" placeholder="请输入底价" />
+    <input type="digit" name="highPrice" placeholder="请输入开票价" />
+    <input type="digit" name="lowP" disabled="{{tfl}}" placeholder="底价扣点数(可选,例如：20)" />
+    <input type="digit" name="highP" disabled="{{tfh}}" placeholder="高开扣点数(可选,例如：20)" />
+    <input type="digit" name="allP" disabled="{{tfa}}" placeholder="全额扣点数(可选,例如：20)" />
+    <view class='rst'>开票费用：<text>{{diffPrice}}</text>元</view>
+    <view class='rst'>剩余利润：<text>{{profit}}</text>元</view>
+    <button type="primary" formType="submit">计算</button>
+    <button type="warn" formType="reset">清空</button>
+</form>

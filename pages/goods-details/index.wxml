@@ -8,21 +8,12 @@
     <view class="goods-text">
       <template is="wxParse" data="{{wxParseData:article.nodes}}" />
     </view>
+  
   </view>
-  <view class="goods-des-info" style="margin-top:35rpx;" wx:if="{{reputation}}">
-    <view class="goods-text" style="margin-top:15rpx;" wx:for="{{reputation}}" wx:key="id">
-      <view style="width:100rpx;float:left;">
-        <image style="width: 100rpx; height: 100rpx;" src="{{item.user.avatarUrl}}"></image>
-        <view style="text-align:center;width:100rpx;">{{item.goods.goodReputationStr}}</view>
-      </view>
-      <view style="width:550rpx;float:left;margin-left:35rpx;border-bottom:1px solid #eee;">
-        <view>{{item.goods.goodReputationRemark}}</view>
-        <view style="color: #B0B0B0;font-size:24rpx;">{{item.goods.dateReputation}} {{item.goods.property}}</view>
-      </view>
-    </view>
-  </view>
+  <view>
   <view class="dashang" bindtap="daShang">赏</view>
   <text class="dashang1yuan">打赏编缉1元</text>
+  </view>
   <view class="hr">
   </view>
   <view class="swiper_box" bindchange="swiperchange">

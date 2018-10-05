@@ -1,4 +1,7 @@
-
+.h1 {
+  margin-top: 16rpx;
+  font-size: 17pt;
+}
 
 .attention {
   font-size: 24rpx;

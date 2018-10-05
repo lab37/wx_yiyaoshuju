@@ -13,6 +13,8 @@
     "pages/goods-details/index",
     "pages/notice/show",
     "pages/small-tools/small-tools",
+    "pages/small-tools/discount/discount",
+    "pages/small-tools/encoders/encoders",
     "pages/query/query",
     "pages/query/zhongduan/zhongduan",
     "pages/query/renli/renli",
