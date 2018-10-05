@@ -6,40 +6,46 @@ function wxpay(app, money, orderId, redirectUrl, cancelOrder) {
     nextAction = { type: 0, id: orderId };
   }
   wx.request({
-    url: 'https://api.it120.cc/' + app.globalData.subDomain + '/pay/wxapp/get-pay-data',
+    url: 'https://api.it120.cc/' + app.globalData.subDomain + '/pay/wx/wxapp',
     data: {
       token: wx.getStorageSync('token'),
-      money:money,
+      money: money,
       remark: remark,
-      payName:"在线支付",
+      payName: "在线支付",
       nextAction: nextAction
     },
     //method:'POST',
-    success: function(res){
-      if(res.data.code == 0){
+    success: function (res) {
+      if (res.data.code == 0) {
         // 发起支付
         wx.requestPayment({
-          timeStamp:res.data.data.timeStamp,
-          nonceStr:res.data.data.nonceStr,
-          package:'prepay_id=' + res.data.data.prepayId,
-          signType:'MD5',
-          paySign:res.data.data.sign,
-          fail:function (aaa) {
+          timeStamp: res.data.data.timeStamp,
+          nonceStr: res.data.data.nonceStr,
+          package: 'prepay_id=' + res.data.data.prepayId,
+          signType: 'MD5',
+          paySign: res.data.data.sign,
+          fail: function (aaa) {
             if (typeof cancelOrder === 'function') {
               cancelOrder(orderId);
             }
-            wx.showToast({title: '支付失败:' + aaa});
-            
+            wx.showToast({ title: '支付失败:' + aaa })
           },
-          success:function () {
-            wx.showToast({title: '支付成功'})
+          success: function () {
+            wx.showToast({ title: '支付成功' })
             wx.redirectTo({
-            url: redirectUrl
+              url: redirectUrl
             });
           }
         })
       } else {
-        wx.showToast({ title: '服务器忙' + res.data.code + res.data.msg})
+        wx.showModal({
+          title: '出错了',
+          content: res.data.code + ':' + res.data.msg + ':' + res.data.data,
+          showCancel: false,
+          success: function (res) {
+
+          }
+        })
       }
     }
   })
