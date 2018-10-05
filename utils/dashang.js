@@ -21,7 +21,8 @@ function dashang(e) {
     var postData = {
       token: loginToken,
       goodsJsonStr: data.goodsJsonStr,
-      remark: remark
+      remark: remark,
+      calculate:false
     };
     if (data.kjId) {
       postData.kjid = data.kjId;
@@ -29,9 +30,7 @@ function dashang(e) {
     if (data.curCoupon) {
       postData.couponId = data.curCoupon.id;
     }
-    if (!e) {
-      postData.calculate = "true";
-    }
+    
     wx.request({
       url: 'https://api.it120.cc/' + app.globalData.subDomain + '/order/create',
       method: 'POST',
@@ -41,6 +40,7 @@ function dashang(e) {
       data: postData, // 设置请求的 参数
       success: (res) => {
         wx.hideLoading();
+        console.log(res);
         if (res.data.code != 0) {
           wx.showModal({
             title: '错误',
@@ -66,7 +66,6 @@ function cancelOrderTap(orderId) {
       success: (res) => {
         wx.hideLoading();
         if (res.data.code == 0) {
-          that.onShow();
         }
       }
     })
