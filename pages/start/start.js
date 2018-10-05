@@ -20,6 +20,17 @@ Page({
     })
   },
   onShow:function(){
+    let that = this
+    let userInfo = wx.getStorageSync('userInfo')
+    if (!userInfo) {
+      wx.navigateTo({
+        url: "/pages/authorize/index"
+      })
+    } else {
+      that.setData({
+        userInfo: userInfo
+      })
+    }
   },
   onReady: function(){
     var that = this;
